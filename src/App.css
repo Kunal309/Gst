@@ -1,0 +1,190 @@
+/* Container for the invoice */
+.invoice-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header section styling */
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.company-info .logo {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.title-section {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.title-section h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Company details styling */
+.company-details {
+  margin-bottom: 20px;
+}
+
+/* Customer info section styling */
+.customer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Align customer address and invoice details */
+.customer-address {
+  flex: 1;
+}
+
+.invoice-details {
+  max-width: 300px; /* Limit the width to ensure it fits well */
+  text-align: right;
+  margin-left: 20px; /* Ensure some spacing between address and invoice details */
+}
+
+.invoice-details label {
+  display: block;
+  margin: 5px 0;
+}
+
+.invoice-details input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+/* Table styling */
+.item-table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.item-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.item-table th, .item-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  word-break: break-word; /* Ensures long text wraps properly */
+}
+
+.item-table th {
+  background-color: #000; /* Black background for table headers */
+  color: #fff; /* White text color for table headers */
+  position: sticky;
+  top: 0;
+}
+
+.item-table td {
+  background-color: #f9f9f9; /* Light background for table cells */
+}
+
+/* Textarea styling */
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  resize: vertical; /* Allow vertical resizing */
+  border-radius: 4px; /* Rounded corners */
+  border: 1px solid #ddd; /* Border style */
+  font-size: 14px; /* Font size */
+}
+
+/* Total section styling */
+.total-section {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 1.2em;
+}
+
+/* Notes and terms section styling */
+.notes-section, .terms-section {
+  margin-top: 20px;
+}
+
+/* Add Item button styling */
+.add-item-button {
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+  margin-top: 20px; /* Space above the button */
+}
+
+.add-item-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .company-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title-section {
+    margin-top: 10px;
+  }
+
+  .item-table-wrapper {
+    margin-top: 10px;
+  }
+
+  .customer-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: static; /* Reset position on smaller screens */
+  }
+
+  .invoice-details {
+    margin-top: 10px;
+    text-align: center; /* Center align on smaller screens */
+    position: static; /* Reset position on smaller screens */
+    max-width: none; /* Remove max-width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .item-table th, .item-table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .total-section {
+    font-size: 1em;
+  }
+
+  textarea {
+    height: 80px;
+  }
+}
